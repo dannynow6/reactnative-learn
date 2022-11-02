@@ -1,5 +1,5 @@
-import { FlatList } from 'react-native'; 
-import { Avatar, ListItem } from 'react-native-elements'; 
+import { FlatList } from 'react-native';
+import { Avatar, ListItem } from 'react-native-elements';
 
 const DirectoryScreen = (props) => {
     const renderDirectoryItem = ({ item: campsite }) => {
@@ -14,14 +14,14 @@ const DirectoryScreen = (props) => {
                 </ListItem.Content>
             </ListItem>
         );
-    }; 
+    };
     return (
-        <FlatList 
-            data={props.campsite} 
+        <FlatList
+            data={props.campsites}
             renderItem={renderDirectoryItem}
             keyExtractor={(item) => item.id.toString()}
         />
     );
 };
 
-export default DirectoryScreen; 
+export default DirectoryScreen;
