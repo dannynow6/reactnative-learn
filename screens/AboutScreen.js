@@ -26,7 +26,7 @@ const AboutScreen = () => {
             <Card>
                 <Card.Title>Community Partners</Card.Title>
                 <Card.Divider /> 
-                {PARTNERS.map((partner) => <ListItem key={partner.id}>
+                {partners.map((partner) => <ListItem key={partner.id}>
                     <Avatar rounded={true} source={partner.image}></Avatar>
                     <ListItem.Content>
                         <ListItem.Title>{partner.name}</ListItem.Title>
