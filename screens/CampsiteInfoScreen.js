@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import RenderCampsite from '../features/campsites/RenderCampsite';
 import { toggleFavorite } from '../features/favorites/favoritesSlice';
 import { useState } from 'react'; 
-import { Rating, Input } from 'react-native-ratings';
+import { Rating, Input } from 'react-native-elements';
 import { postComment } from '../features/comments/commentsSlice';
 
 
@@ -41,17 +41,14 @@ const CampsiteInfoScreen = ({ route }) => {
                 <Rating 
                     readOnly
                     showRating
-                    startingValue={rating}
+                    startingValue={item.rating}
                     imageSize={10}
-                    onFinishRating={(rating)=> setRating(rating)}
                     style={{
                         alignItems: 'flex-start', 
                         paddingVertical: '5%', 
                         fontSize: 12
                     }}
-                >
-                    {item.rating} Stars 
-                </Rating>
+                />
                 <Text style={{ fontSize: 12 }}>
                     {`-- ${item.author}, ${item.date}`}
                 </Text>
