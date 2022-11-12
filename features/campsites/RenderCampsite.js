@@ -6,7 +6,7 @@ const RenderCampsite = (props) => {
     const { campsite } = props;
     if (campsite) {
         return (
-            <Card style={styles.cardContainer}>
+            <Card containerStyle={styles.cardContainer}>
                 <Card.Image source={{ uri: baseUrl + campsite.image }}>
                     <View style={{ justifyContent: 'center', flex: 1 }}>
                         <Text style={styles.cardText}>
@@ -15,7 +15,7 @@ const RenderCampsite = (props) => {
                     </View>
                 </Card.Image>
                 <Text style={{ margin: 20 }}>{campsite.description}</Text>
-                <View style={styles.cardRow}>
+                <View style={ styles.cardRow }>
                     <Icon
                         name={props.isFavorite ? 'heart' : 'heart-o'}
                         type='font-awesome'
