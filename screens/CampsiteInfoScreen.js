@@ -4,6 +4,7 @@ import RenderCampsite from '../features/campsites/RenderCampsite';
 import { toggleFavorite } from '../features/favorites/favoritesSlice';
 import { useState } from 'react'; 
 import { Rating, Input } from 'react-native-ratings';
+import { postComment } from '../features/comments/commentsSlice';
 
 
 const CampsiteInfoScreen = ({ route }) => {
@@ -23,7 +24,7 @@ const CampsiteInfoScreen = ({ route }) => {
             text,
             campsiteId: campsite.id
         };
-        console.log(newComment);
+        dispatch(postComment(newComment)); 
         setShowModal(!showModal); 
     };
 
