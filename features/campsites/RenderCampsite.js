@@ -6,16 +6,16 @@ const RenderCampsite = (props) => {
     const { campsite } = props;
     if (campsite) {
         return (
-            <Card onShowModal={() => setShowModal(!showModal)} containerStyle={styles.cardContainer}>
+            <Card style={styles.cardContainer}>
                 <Card.Image source={{ uri: baseUrl + campsite.image }}>
                     <View style={{ justifyContent: 'center', flex: 1 }}>
-                        <Text textStyle={styles.cardText}>
+                        <Text style={styles.cardText}>
                             {campsite.name}
                         </Text>
                     </View>
                 </Card.Image>
                 <Text style={{ margin: 20 }}>{campsite.description}</Text>
-                <View rowStyle={styles.cardRow}>
+                <View style={styles.cardRow}>
                     <Icon
                         name={props.isFavorite ? 'heart' : 'heart-o'}
                         type='font-awesome'
@@ -29,7 +29,7 @@ const RenderCampsite = (props) => {
                         }
                     />
                     <Icon
-                        name='pencil'
+                        name='pencil' 
                         type='font-awesome'
                         color='#5637DD'
                         raised
