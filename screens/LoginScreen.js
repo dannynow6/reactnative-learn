@@ -3,8 +3,8 @@ import { View, StyleSheet, ScrollView, Image } from 'react-native';
 import { CheckBox, Input, Button, Icon } from 'react-native-elements';
 import * as SecureStore from 'expo-secure-store';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import ImagePicker from 'expo-image-picker'; 
-import baseUrl from '../shared/baseUrl'; 
+import * as ImagePicker from 'expo-image-picker'; 
+import { baseUrl } from '../shared/baseUrl'; 
 import logo from '../assets/images/logo.png'; 
 
 const LoginTab = ({ navigation }) => {
